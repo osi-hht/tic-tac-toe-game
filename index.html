@@ -1,77 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>African Animals</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="nav-logo">African Wildlife</a>
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">Details</a></li>
-      </ul>
+    <div class="menu" id="main-menu">
+        <h1>Tic Tac Toe</h1>
+        <button onclick="startGame()">Start Game</button>
     </div>
-  </nav>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Discover African Wildlife</h1>
-    <p>Explore the majestic animals of Africa</p>
-    <div class="header-animation"></div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <section class="intro">
-      <h2>Welcome to the Wild</h2>
-      <p>Africa is home to some of the most incredible animals on the planet. From the savannas to the jungles, discover the beauty and diversity of African wildlife.</p>
-    </section>
-
-    <section class="animal-gallery">
-      <h2>Featured Animals</h2>
-      <div class="gallery-container">
-        <div class="animal-card" id="lion">
-          <div class="card-content">
-            <h3>Lion</h3>
-            <p>The lion is a majestic big cat known as the "King of the Jungle."</p>
-            <button onclick="showMore('lion')">Learn More</button>
-          </div>
-          <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200?text=Lion');"></div>
+    <div id="game-container" style="display: none;">
+        <h2 id="status">Player X's Turn</h2>
+        <div class="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
         </div>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="exitGame()">Exit</button>
+    </div>
 
-        <div class="animal-card" id="elephant">
-          <div class="card-content">
-            <h3>Elephant</h3>
-            <p>Elephants are the largest land animals, known for their intelligence and memory.</p>
-            <button onclick="showMore('elephant')">Learn More</button>
-          </div>
-          <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200?text=Elephant');"></div>
-        </div>
-
-        <div class="animal-card" id="giraffe">
-          <div class="card-content">
-            <h3>Giraffe</h3>
-            <p>Giraffes are the tallest mammals, with long necks and unique spotted patterns.</p>
-            <button onclick="showMore('giraffe')">Learn More</button>
-          </div>
-          <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200?text=Giraffe');"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 African Wildlife. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
